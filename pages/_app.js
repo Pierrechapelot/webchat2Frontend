@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import React from "react";
-import logo from "../src/logo.jpg";
+import logo from "../src/logo.png";
 // import "./App.scss";
 import socketClient from "socket.io-client";
 
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"></img>
+        <img src={logo} className="App-logo" alt="Logo"></img>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
