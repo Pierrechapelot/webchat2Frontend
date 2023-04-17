@@ -1,14 +1,31 @@
-import '../styles/globals.css';
-import Head from 'next/head';
+import "../styles/globals.css";
+import React from "react";
+import logo from "../src/logo.png";
+import "./App.scss";
+import socketClient from "socket.io-client";
 
-function App({ Component, pageProps }) {
+const SERVER = "http://127.0.0.1:8080";
+
+function App() {
+  var socket = socketClient(SERVER);
+
   return (
-    <>
-      <Head>
-        <title>Next.js App</title>
-      </Head>
-      <Component {...pageProps} />
-    </>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo"></img>
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
